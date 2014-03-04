@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    font-family: -apple-system-font, Helvetica, sans-serif;
+    font-weight: 300;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:'';
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* */
+html { height: 100%; }
+body { height: 100%; padding-top: 42px; font-size: 14px; }
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    min-height: ;
+    top: 0;
+    margin-bottom: 50px;
+    padding: 12px 0;
+    color: #fff;
+    background-color: #0033CC;
+    border-bottom: solid 1px #122088;
+    z-index: 1000;
+}
+
+.topnav a { color: #fff; font-size: 17px; }
+.topnav a.back { display: block; position: absolute; margin-left: 12px; }
+.topnav h1 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+}
+
+.review {
+
+    position: right;
+    border:solid;
+    font-size:100%;
+    font:inherit;
+    font-family: -apple-system-font, Helvetica, sans-serif;
+    font-weight: 300;
+    text-decoration:none;
+    color: #AF0404;
+    border-color:#EBEBE0;
+    margin-top:20px;
+    padding-left:2a0px;
+
+}
+
+ol {
+
+}
+
+li {
+    padding: 15px;
+    color: #7f2020;
+    border-bottom: solid 1px #ccc;
+}
+
+a {
+    text-decoration: none;
+    color: #AF0404;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #AF0404;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #AF0404;
+}
+
+.scrollable { overflow-x: scroll; overflow-x: visible; }
+
+#map { width: 100%; height: 100%; background-color: #ccc; }
+
+#schedule_details { padding-top: 50px; text-align: center; }
+#schedule_details h1 { font-size: 180px; font-weight: bold; }
+#schedule_details p { margin-bottom: 10px; font-size: 22px; font-weight: normal; text-transform: uppercase; }

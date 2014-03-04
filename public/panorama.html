@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
+    <title>Home - Madison App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="home" onload="initialize()">
+
+    <div class="topnav">
+        <h1>Madison App</h1>
+    </div>
+
+    <div id="pano_canvas" style="width: 100%; height: 100%;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript">
+        var panorama;
+        var sewallcrestCityPark = new google.maps.LatLng(45.509197,-122.633194);
+
+        function initialize() {
+
+          // Set up Street View and initially set it visible. Register the
+          // custom panorama provider function. Set the StreetView to display
+          // the custom panorama 'reception' which we check for below.
+          var panoOptions = {
+            pano: 'park',
+            visible: true,
+            panoProvider: getCustomPanorama
+          }
+
+          panorama = new google.maps.StreetViewPanorama(
+              document.getElementById('pano_canvas'),panoOptions);
+        }
+        
+        // 
+        function getCustomPanorama(pano,zoom,tileX,tileY) {
+
+            return {
+                // Set the approximate location on the map where this panorama is located. 
+                location: {
+                    pano: 'park',
+                    description: "Sewallcrest City Park",
+                    latLng: sewallcrestCityPark
+                },
+                // The text for the copyright control.
+                copyright: '',
+                // The definition of the tiles for this panorama.
+                tiles: {
+                    tileSize: new google.maps.Size(19987, 2234),
+                    worldSize: new google.maps.Size(19987, 2234),
+                    // The heading at the origin of the panorama tile set.
+                    centerHeading: 75,
+                    getTileUrl: getCustomPanoramaTileUrl
+                }
+            };
+        }
+
+        // Return an image for the visible portion of the panorama. More
+        // advanced usage would involve splitting the image in to a bunch of 
+        // smaller images to allow for faster loading. But in this case we 
+        // just use a single image that is hard coded.
+        function getCustomPanoramaTileUrl(pano,zoom,tileX,tileY) {
+          return 'img/park.jpg';
+        }
+    </script>
+
+</body>
+</html>

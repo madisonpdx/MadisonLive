@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
+    <title>Map - Madison App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body onload="initialize()">
+
+    <div class="topnav">
+        <a href="javascript:history.back();" class="back">Back</a>
+        <h1>Map</h1>
+    </div>
+
+    <div id="map"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-1yHM7CX17aTibsGjspDbKcMmbTKeLFs&sensor=true"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(45.541954, -122.580773),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var madison = new google.maps.Marker({
+                position: new google.maps.LatLng(45.541954, -122.580773),
+                map: map,
+                title: 'Madison High School'
+            });
+
+            if (window.location.hash == '#subway') {
+                var subway = new google.maps.Marker({
+                    position: new google.maps.LatLng(45.5447, -122.579087),
+                    map: map,
+                    title: 'Subway'
+                });
+            }
+            else if (window.location.hash == '#tacobell') {
+                var tacoBell = new google.maps.Marker({
+                    position: new google.maps.LatLng(45.538542, -122.579057),
+                    map: map,
+                    title: 'Taco Bell'
+                });
+            }
+            else {
+                var phoOregon = new google.maps.Marker({
+                    position: new google.maps.LatLng(45.540387, -122.578777),
+                    map: map,
+                    title: 'Pho Oregon'
+                });
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>
