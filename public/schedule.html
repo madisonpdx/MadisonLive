@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
     <title>Schedule - Madison App</title>
-    <link rel="stylesheet" href="css/main.css">
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
+    <link rel="stylesheet" href="css/bootstrap.css">
 
-<body onload="">
+<body onload="" id="home"><script src="js/bootstrap.js"></script>
 
-    <div class="topnav">
-        <a href="javascript:history.back();" class="back">Back</a>
-        <h1>Schedule</h1>
-    </div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <h1>Madison Live<span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-envelope"></span><span class="glyphicon glyphicon-wrench"></span></h1>
+    </nav>
 
-    <div id="schedule_details"></div>
+    <div class="container-fluid row"><ul>
+        <div><li><a href="index.html">Home</a></li>
+        <li><a href="floors.html">Building Map</a></li>
+        <li><a href="lunch-options.html">Lunch Options</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="onlineplanner.html">Online Planner</a></li>
+    </ul>
+    <ul><li>
+        Love the app? See a bug? Let us know!<br>
+        <form id="message" value="message">
+        Contact Us:<input type="text">
+        <input type="submit" value="Send" action="mailto:TristanDamron31@gmail.com"></form>
+    </li></ul></div>
+    <div class="col-md-1 chatbox">
+<!-- Ruby chat code should get included here. Chatboxes should show up on all the pages. -->
+    </div></div>
+
+    <div class="images" id="schedule_details"></div>
 
     <script type="text/javascript">
     </script>
