@@ -1,7 +1,7 @@
 function checkpasswordmath() {
         var password = document.getElementById("form").value;
         var pass=new Array()
-        pass = ["ladajian2014","delwell2014","mkoenig2014","mmoore2014","tnguyen2014","lphillips2014","dwhite2014","sweincke2014","bwoodruff2014";]
+        pass = ["ladajian2014","delwell2014","mkoenig2014","mmoore2014","tnguyen2014","lphillips2014","dwhite2014","sweincke2014","bwoodruff2014"];
 
     for (var i = 0; i < pass.length; i++) {
         if (password==pass[i++]) {
