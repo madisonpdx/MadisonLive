@@ -1,0 +1,13 @@
+<% content_for :navigation_left do %>
+    <%= link_to 'Back', '/' %>
+<% end %>
+
+<% content_for :navigation_title do %>
+    Courses
+<% end %>
+
+<ul>
+  <% @courses.each do |course| %>
+      <li><%= link_to course.title, course_assignments_path(course) %></li>
+  <% end %>
+</ul>

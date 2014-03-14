@@ -1,0 +1,8 @@
+<h1><%= @schedule.code %></h1>
+<% if @schedule.description.length > 0 %>
+    <p><%= @schedule.description %></p>
+<% else %>
+    <% @schedule.schedule_segments.each do |segment| %>
+        <p><%= segment.title %></p>
+    <% end %>
+<% end %>

@@ -1,0 +1,17 @@
+<% content_for :navigation_title do %>
+    Assignments
+<% end %>
+
+<% content_for :navigation_left do %>
+    <%= link_to 'Back', courses_path %>
+<% end %>
+
+<% content_for :navigation_right do %>
+    <%= link_to 'Add', new_course_assignment_path  %>
+<% end %>
+
+<ul>
+  <% @assignments.each do |assignment| %>
+      <li><%= link_to assignment.title, course_assignment_path(assignment.course, assignment) %></li>
+  <% end %>
+</ul>

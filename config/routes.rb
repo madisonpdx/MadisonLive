@@ -1,11 +1,22 @@
 MadisonLive::Application.routes.draw do
+  root :to => 'home#index'
+
+  devise_for :users
+
+  # Requests for schedules are directed to the schedules controller and can get html or json.
+  get '/schedules(/:date)(.:format)' => 'schedules#show'
+
+  resources :courses do
+    resources :assignments
+  end
+
   resources :indices
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
