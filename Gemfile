@@ -12,12 +12,6 @@ gem 'devise'
 group :production do
   # Use postgresql as the database for Active Record
   gem 'pg'
-
-  # Use puma as the app server
-<<<<<<< HEAD
-=======
-  #gem 'puma'
->>>>>>> 9fcc9413775277e23c912acd91529a35f7d323ed
 end
 
 gem 'devise'
