@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = '8a2c5864b327d9bea8bc5a40535c46f76028cd33ad4839d31987fc3e2869e2495d49deef6bb36aa700970b14f79d8a62fd6a75d7430ac280d7da828020aeceff'
+  config.secret_key = '7a537febf3d297182b4f9a203efbf8bf4a50c165d53165c1f8c8f9ea8a4abf24bc8bc817435a9abc7153e47d2bffa0a2395e4d3f8ad3f308603d49914299d6e4'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -56,9 +56,12 @@ Devise.setup do |config|
 
   # Tell if authentication through HTTP Auth is enabled. False by default.
   # It can be set to an array that will enable http authentication only for the
-  # given strategies, for example, `config.http_authenticatable = [:database]` will
-  # enable it only for database authentication. The supported strategies are:
+  # given strategies, for example, `config.http_authenticatable = [:token]` will
+  # enable it only for token authentication. The supported strategies are:
   # :database      = Support basic authentication with authentication key + password
+  # :token         = Support basic authentication with token authentication key
+  # :token_options = Support token authentication with options as defined in
+  #                  http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token.html
   # config.http_authenticatable = false
 
   # If http headers should be returned for AJAX requests. True by default.
@@ -73,7 +76,7 @@ Devise.setup do |config|
   # config.paranoid = true
 
   # By default Devise will store the user in session. You can skip storage for
-  # particular strategies by setting this option.
+  # :http_auth and :token_auth by adding those symbols to the array below.
   # Notice that if you are skipping storage for all authentication paths, you
   # may want to disable generating routes to Devise's sessions controller by
   # passing :skip => :sessions to `devise_for` in your config/routes.rb
@@ -95,7 +98,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '3fb2f9d9dccd041d0b135e6657a09bac3d5754afb34a3218463e264dd7d578a4fd98ae819de3a508f94db81de9f49a5314fb314455f65134ded3f724be2a769e'
+  # config.pepper = '533b4a59d8ff2fda5201fc078eb958cc94789b17900ad843e09813690b850bfa5852b47fecfadff7b4dcc6f7fd1d520897a37388009cc99d54217bf11841aedf'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -173,9 +176,6 @@ Devise.setup do |config|
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
 
-  # Warn on the last attempt before the account is locked.
-  # config.last_attempt_warning = false
-
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
@@ -195,6 +195,10 @@ Devise.setup do |config|
   #
   # Require the `devise-encryptable` gem when using anything other than bcrypt
   # config.encryptor = :sha512
+
+  # ==> Configuration for :token_authenticatable
+  # Defines name of the authentication token params key
+  # config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for

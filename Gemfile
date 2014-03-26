@@ -8,12 +8,12 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'devise'
 group :production do
   # Use postgresql as the database for Active Record
   gem 'pg'
 
   # Use puma as the app server
-  gem 'puma'
 end
 
 gem 'devise'
