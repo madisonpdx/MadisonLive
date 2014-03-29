@@ -17,7 +17,7 @@
 <nav class="navbar navbar-inverse navbar-static-top">
   <h1>Madison Live<span class="glyphicon glyphicon-user dropdown dropdown-toggle" data-toggle="dropdown" id="profile" href="#"></span><ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="profile"><li role="presentation"><a role="menuitem" tabindex="-1">
   <% if user_signed_in? %>
-  <%= link_to("View Profile", new_user_session_path) %>
+  <%= link_to('View Profile', profiles_path(current_user.id)) %>
 <% else %>
   <%= link_to("Sign In", new_user_session_path) %>
 <% end %></a></li></ul>

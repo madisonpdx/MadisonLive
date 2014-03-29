@@ -3,6 +3,8 @@ MadisonLive::Application.routes.draw do
 
   devise_for :users
 
+  get '/profiles/show/:id', to: 'profiles#show', as: 'profiles'
+
   # Requests for schedules are directed to the schedules controller and can get html or json.
   get '/schedules(/:date)(.:format)' => 'schedules#show'
 
