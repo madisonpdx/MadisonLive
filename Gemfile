@@ -8,13 +8,14 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'devise'
 group :production do
   # Use postgresql as the database for Active Record
   gem 'pg'
 end
 
 gem 'devise'
+
+gem 'capistrano'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
