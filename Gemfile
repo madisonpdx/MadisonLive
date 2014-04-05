@@ -10,6 +10,7 @@ end
 
 group :production do
   # Use postgresql as the database for Active Record
+  gem 'puma'
   gem 'pg'
 end
 
