@@ -1,2 +1,2 @@
-<h1><% if user_signed_in? %><%= current_user.email  %><% else %><%= "You must be signed in to see this page." %><% end %></h1>
+<h1><% if user_signed_in? %><%= @profile.email %><% else %><%= "You must be signed in to see this page." %><% end %></h1>
 <p>Find me in app/views/profiles/show.html.erb</p>
