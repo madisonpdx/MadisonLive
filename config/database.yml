@@ -19,7 +19,12 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: madison_live
+  username: madison
+  password: R8z45?iid@
   pool: 5
   timeout: 5000
+
