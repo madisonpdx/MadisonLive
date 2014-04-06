@@ -12,6 +12,8 @@ group :production do
   # Use postgresql as the database for Active Record
   gem 'puma'
   gem 'pg'
+  gem 'execjs'
+  gem 'therubyracer'
 end
 
 gem 'devise'
