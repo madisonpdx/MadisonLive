@@ -17,6 +17,7 @@ end
 gem 'devise'
 
 gem 'capistrano'
+gem 'capistrano-bundler'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
