@@ -5,7 +5,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
-  <link href="https://abs.twimg.com/favicons/favicon.ico" rel="icon" type="image">
+  <link href="http://www.pps.k12.or.us/schools/madison/files/madison/madison_logo_restored.png" rel="icon" type="image">
   <title>MadisonLive</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -21,6 +21,10 @@
   <%= link_to('View Profile', profiles_path(current_user.id)) %>
 <% else %>
   <%= link_to("Sign In", new_user_session_path) %>
+<% end %></a><li role="presentation"><a role="menuitem" tabindex="-1">
+  <% if user_signed_in? %>
+  <%= link_to('Edit Profile', profiles_path(current_user.id)) %>
+<% else %>
 <% end %></a></li><li role="presentation" class="divider"></li><li role="presentation"><a role="menuitem" tabindex="-1" href="#">Search Users</a></li><li role="presentation" class="divider"></li><li role="presentation"><a role="menuitem" tabindex="-1" href="#">Browse Classes</a></li></ul></span>
 
   <span><span class="glyphicon glyphicon-envelope dropdown dropdown-toggle" data-toggle="dropdown" id="messages" href="#"></span><ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="messages"><li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Message</a></li><li role="presentation" class="divider"></li><li role="presentation"><a role="menuitem" tabindex="-1" href="#">View Messages</a></li><li role="presentation" class="divider"></li><li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pop Out Chat</a></li></ul></span>
