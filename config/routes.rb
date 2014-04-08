@@ -13,6 +13,7 @@ MadisonLive::Application.routes.draw do
   end
 
   resources :indices
+  resources :statuses, :only => [:index, :new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

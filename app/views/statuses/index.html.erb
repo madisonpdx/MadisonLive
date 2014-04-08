@@ -1,0 +1,17 @@
+<% content_for :navigation_title do %>
+    Update Status
+<% end %>
+
+<%= form_for @status do |f| %>
+    <div style="margin: 0px 20px; padding: 20px 0px;">
+      <label>Text</label>
+      <%= f.text_field :text %>
+      <%= f.submit 'Submit', :class => 'button small' %>
+    </div>
+<% end %>
+
+<ul>
+<% @statuses.each do |status| %>
+    <li><%= status.text %></li>
+<% end %>
+</ul>
