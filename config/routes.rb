@@ -6,7 +6,7 @@ MadisonLive::Application.routes.draw do
   get '/profiles/show/:id', to: 'profiles#show', as: 'profiles'
 
   # Requests for schedules are directed to the schedules controller and can get html or json.
-  get '/schedules(/:date)(.:format)' => 'schedules#show'
+  get '/schedules(/:date)(.:format)' => 'schedules#show', :as => :schedules
 
   resources :courses do
     resources :assignments
