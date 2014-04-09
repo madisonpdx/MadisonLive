@@ -1,7 +1,7 @@
 MadisonLive::Application.routes.draw do
   root :to => 'home#index'
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
 
   get '/profiles/show/:id', to: 'profiles#show', as: 'profiles'
 
