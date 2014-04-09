@@ -10,7 +10,7 @@
 		<th><%= link_to("Change Email", edit_user_registration_path) %></th>
 	</tr>
 	<tr>
-		<th><%= link_to("Deactivate Account", user_registration_path, :confirm => "Are you sure you want to deactivate?", :method => :delete) %></th>
+		<th><%= link_to("Deactivate Account", user_registration_path, :confirm => "Are you sure you want to deactivate your account? You can not reverse this action.", :method => :delete) %></th>
 	</tr>
 </table>
-<p>From this control panel, you can change basic things about your profile. <br /> Don't see what you're looking for? Check the advanced settings.</p>
+<p>From this control panel, you can change basic things about your profile. <br /> Don't see what you're looking for? Check the <%= link_to("advanced settings.", '/advancedsettings') %></p>
