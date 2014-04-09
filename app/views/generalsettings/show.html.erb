@@ -1,0 +1,16 @@
+<h1>General Settings</h1>
+<table class="table table-bordered table-hover">
+	<tr>
+		<th>Edit Your Profile</th>
+	</tr>
+	<tr>
+		<th><%= link_to("Change Password", edit_user_password_path) %></th>
+	</tr>
+	<tr>
+		<th><%= link_to("Change Email", edit_user_registration_path) %></th>
+	</tr>
+	<tr>
+		<th><%= link_to("Deactivate Account", user_registration_path, :confirm => "Are you sure you want to deactivate?", :method => :delete) %></th>
+	</tr>
+</table>
+<p>From this control panel, you can change basic things about your profile. <br /> Don't see what you're looking for? Check the advanced settings.</p>

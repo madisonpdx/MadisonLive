@@ -1,0 +1,2 @@
+module GeneralsettingsHelper
+end
