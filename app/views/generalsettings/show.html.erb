@@ -1,7 +1,7 @@
 <h1>General Settings</h1>
 <table class="table table-bordered table-hover">
 	<tr>
-		<th>Edit Your Profile</th>
+		<th><%= link_to("Edit Profile", ) %></th>
 	</tr>
 	<tr>
 		<th><%= link_to("Change Password", edit_user_password_path) %></th>
@@ -14,3 +14,4 @@
 	</tr>
 </table>
 <p>From this control panel, you can change basic things about your profile. <br /> Don't see what you're looking for? Check the <%= link_to("advanced settings.", '/advancedsettings') %></p>
+
