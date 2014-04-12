@@ -1,4 +1,5 @@
 MadisonLive::Application.routes.draw do
+  get "/generalsettings", to: "generalsettings#show"
   root :to => 'home#index'
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
