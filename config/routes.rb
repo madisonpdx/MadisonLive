@@ -1,4 +1,5 @@
 MadisonLive::Application.routes.draw do
+  get "advancedsettings", to: "advancedsettings#show"
   get "/generalsettings", to: "generalsettings#show"
   root :to => 'home#index'
 
