@@ -80,6 +80,16 @@
         chatbox.style.color = chatcolor;
 
 
+        function randomcolor() {
+
+          var characters = '0123456789ABCDEF'.split('');
+          var color = '#';
+
+          for(var i = 0; i < 6; i ++) {
+            color += characters[Math.round(Math.random()*15)];
+          }
+          return color;
+        }
 
         </script>
       </div>
