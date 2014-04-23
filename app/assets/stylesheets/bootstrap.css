@@ -46,18 +46,6 @@ template {
 a {
   background: transparent;
 }
-.avatar {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    top: 10px;
-    left: 10px;
-    padding-top: 10px;
-    background-color: #000;
-    font-family: Helvetica, Sans-Serif;
-    text-align: center;
-    vertical-align: middle;
-}
 
 a:active,
 a:hover {
