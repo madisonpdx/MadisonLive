@@ -19,7 +19,7 @@ set :ruby_version, '2.1.1'
 set :chruby_config, '/etc/profile.d/chruby.sh'
 set :set_ruby_cmd, "source #{chruby_config} && chruby #{ruby_version}"
 set(:bundle_cmd) {
-  "#{set_ruby_cmd} && exec bundle --without development"
+  "#{set_ruby_cmd} && exec bundle"
 }
 
 after 'deploy:update_code', 'deploy:migrate'
