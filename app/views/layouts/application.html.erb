@@ -59,39 +59,6 @@
       </ul>
 
       <div class="col-md-1 chatbox">
-        <div id="user" class="avatar">
-          <% if user_signed_in? %>
-            <%= "Me" %>
-          <% else %>
-            <%= "Unregistered User" %>
-          <% end %>
-        </div>    
-            
-        <script type="text/javascript">
-        var id = new.Date().getTime();
-        var chatX = Math.floor(0)+1;
-        var chatY = Math.floor(0)+1;
-        var chatcolor = randomcolor();
-        var chatposition = {};
-
-        var chatbox = document.getElementById("me");
-        chatbox.style.left = chatX + 'px';
-        chatbox.style.right = chatY + 'px';
-        chatbox.style.color = chatcolor;
-
-
-        function randomcolor() {
-
-          var characters = '0123456789ABCDEF'.split('');
-          var color = '#';
-
-          for(var i = 0; i < 6; i ++) {
-            color += characters[Math.round(Math.random()*15)];
-          }
-          return color;
-        }
-
-        </script>
       </div>
     </div>
 
