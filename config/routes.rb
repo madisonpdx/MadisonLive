@@ -8,6 +8,8 @@ MadisonLive::Application.routes.draw do
 
   get '/profiles/show/:id', to: 'profiles#show', as: 'profiles'
 
+  get '/password/edit', to: 'passwords#edit', as: 'passwords'
+
   get '/messages', to: 'chat#show', as: 'chat'
 
   get '/profiles/edit' , to: 'profiles#edit', as: 'editprofile'
