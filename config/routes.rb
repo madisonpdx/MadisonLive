@@ -10,7 +10,7 @@ MadisonLive::Application.routes.draw do
 
   get '/password/edit', to: 'passwords#edit', as: 'passwords'
 
-  get '/messages', to: 'chat#show', as: 'chat'
+  get '/messages/', to: 'chat#show', as: 'chat'
 
   get '/profiles/edit' , to: 'profiles#edit', as: 'editprofile'
   # Requests for schedules are directed to the schedules controller and can get html or json.
