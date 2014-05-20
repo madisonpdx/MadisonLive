@@ -1,9 +1,0 @@
-<h1>Messages</h1>
-<%= form_for(@message) do |f| %>
-            <div>Subject
-            <%= f.text_field :subject %></div>
-            <div>Message
-            <%= f.text_area :body%></div>
-             <%= f.hidden_field(:user, :value => @user.id) %>
-            <p><%= f.submit 'Send message'%></p>
-        <% end %>
