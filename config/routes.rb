@@ -18,6 +18,7 @@ MadisonLive::Application.routes.draw do
 
   resources :locations, :only => [:index, :show]
   resources :maps, :only => [:index, :show]
+  resources :direct_messages, :only => [:index, :new, :create]
 
   resources :courses do
     resources :assignments
