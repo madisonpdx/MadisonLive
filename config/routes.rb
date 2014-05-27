@@ -17,6 +17,7 @@ MadisonLive::Application.routes.draw do
   get '/schedules(/:date)(.:format)' => 'schedules#show', :as => :schedules
 
   resources :locations, :only => [:index, :show]
+  resources :maps, :only => [:index, :show]
 
   resources :courses do
     resources :assignments

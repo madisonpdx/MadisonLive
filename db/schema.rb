@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527020057) do
+ActiveRecord::Schema.define(version: 20140527210212) do
 
   create_table "assignments", force: true do |t|
     t.integer  "course_id"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20140527020057) do
     t.string   "description"
     t.decimal  "latitude",    precision: 9, scale: 6
     t.decimal  "longitude",   precision: 9, scale: 6
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "maps", force: true do |t|
+    t.string   "title",      null: false
+    t.string   "floor",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
