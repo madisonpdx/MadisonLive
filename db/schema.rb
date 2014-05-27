@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425102828) do
+ActiveRecord::Schema.define(version: 20140527020057) do
 
   create_table "assignments", force: true do |t|
     t.integer  "course_id"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 20140425102828) do
   create_table "indices", force: true do |t|
     t.string   "name"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.decimal  "latitude",    precision: 9, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
     t.datetime "created_at"
     t.datetime "updated_at"
   end

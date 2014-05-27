@@ -77,13 +77,13 @@
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid" style="height: 100%;">
+  <div class="row" style="height: 100%;">
     <div class="col-md-2 col-sm-2 col-xs-12">
       <ul class="left-nav">
         <li><a href="/">Home</a></li>
         <li><a href="floors.html">Building Map</a></li>
-        <li><a href="lunch-options.html">Lunch Options</a></li>
+        <li><%= link_to('Lunch Options', locations_path) %></li>
         <li><%= link_to('Schedule', schedules_path) %></li>
         <li><a href="onlineplanner.html">Online Planner</a></li>
         <li><%= link_to('Statuses', statuses_path) %></li>
@@ -95,7 +95,7 @@
       </div>
     </div>
 
-    <div class="col-md-10 col-sm-10 col-xs-12">
+    <div class="col-md-10 col-sm-10 col-xs-12" style="height: 100%;">
       <%= yield %>
     </div>
   </div>

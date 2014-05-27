@@ -1,0 +1,5 @@
+<ul>
+  <% @locations.each do |location| %>
+    <li><%= link_to location.title, location_path(location), 'data-no-turbolink' => true %></li>
+  <% end %>
+</ul>

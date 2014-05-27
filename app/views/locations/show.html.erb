@@ -1,0 +1,27 @@
+<div id="map"></div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-1yHM7CX17aTibsGjspDbKcMmbTKeLFs&sensor=true"></script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(<%= @location.latitude %>, <%= @location.longitude %>),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var madison = new google.maps.Marker({
+            position: new google.maps.LatLng(45.541954, -122.580773),
+            map: map,
+            title: 'Madison High School'
+        });
+
+        var location = new google.maps.Marker({
+            position: new google.maps.LatLng(<%= @location.latitude %>, <%= @location.longitude %>),
+            map: map,
+            title: '<%= @location.title %>'
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
