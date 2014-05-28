@@ -10,12 +10,12 @@ class StatusesController < ApplicationController
   def create
     @statuses = Status.order(created_at: :desc).limit(10)
     @status = Status.new(params.require(:status).permit(:text))
-    @status.user = current_user
+    @status_user = User.find(params[:id])
 
     if @status.save
       redirect_to statuses_path
     else
-      render 'statuses/index'
+      render 'statuses/index/'
     end
   end
 
