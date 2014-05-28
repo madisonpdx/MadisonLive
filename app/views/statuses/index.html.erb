@@ -15,7 +15,9 @@
 
 <ul class="statuses">
 <% @statuses.each do |status| %>
-    <li><h3><%= image_tag @statuses.avatar.url %><%= status.username %></h3>
-      <%= status.text %></li>
+    <li>
+        <h3><%= image_tag status.user.avatar.url(:thumb) %><%= status.user.full_name %></h3>
+        <%= status.text %>
+    </li>
 <% end %>
 </ul>
