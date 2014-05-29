@@ -20,3 +20,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore directory created by paperclip.
+/public/system
