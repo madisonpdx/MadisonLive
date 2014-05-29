@@ -1,0 +1,15 @@
+<%= form_for @message do |f| %>
+    <div>
+      <%= image_tag @to_user.avatar.url(:thumb) %><%= @to_user.full_name %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_area :text, :class => 'form-control direct-message-text' %>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12" style="text-align: left;">
+        <%= f.submit 'Send', :class => 'btn btn-primary small col-sm-2 col-xs-12' %>
+      </div>
+    </div>
+<% end %>

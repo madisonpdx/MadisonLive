@@ -7,6 +7,7 @@ class DirectMessagesController < ApplicationController
 
   def new
     @message = DirectMessage.new()
+    @to_user = User.find(params[:to_user_id])
   end
 
   def create
