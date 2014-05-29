@@ -12,6 +12,8 @@ MadisonLive::Application.routes.draw do
 
   get '/messages/', to: 'chat#show', as: 'chat'
 
+  get '/onlineplanner/', to: 'onlineplanner#show', as: 'onlineplanner'
+
   get '/profiles/edit' , to: 'profiles#edit', as: 'editprofile'
   # Requests for schedules are directed to the schedules controller and can get html or json.
   get '/schedules(/:date)(.:format)' => 'schedules#show', :as => :schedules

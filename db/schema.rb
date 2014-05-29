@@ -78,10 +78,14 @@ ActiveRecord::Schema.define(version: 20140528013432) do
   end
 
   create_table "statuses", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.text     "text",       null: false
+    t.integer  "user_id",           null: false
+    t.text     "text",              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "user_file_name"
+    t.string   "user_content_type"
+    t.integer  "user_file_size"
+    t.datetime "user_updated_at"
   end
 
   create_table "users", force: true do |t|
