@@ -1,12 +1,12 @@
 <% content_for :navigation_title do %>
-    Received Messages
+    Sent Messages
 <% end %>
 
 <ul class="direct-messages">
   <% @messages.each do |message| %>
       <li>
         <%= link_to new_direct_message_path(:to_user_id => message.from_user_id) do %>
-            <%= image_tag message.from_user.avatar.url(:thumb) %><%= message.from_user.full_name %>
+            <%= image_tag message.to_user.avatar.url(:thumb) %><%= message.to_user.full_name %>
             <%= message.text %>
         <% end %>
       </li>

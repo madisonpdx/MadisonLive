@@ -2,23 +2,27 @@ MadisonLive::Application.routes.draw do
   get '/advancedsettings', to: 'advancedsettings#show'
   get '/generalsettings', to: 'generalsettings#show'
 
-  root :to => 'home#index'
+  root :to => 'statuses#index'
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
-
-  get '/profiles/show/:id', to: 'profiles#show', as: 'profiles'
 
   get '/password/edit', to: 'passwords#edit', as: 'passwords'
 
   get '/messages/', to: 'chat#show', as: 'chat'
 
-  get '/profiles/edit' , to: 'profiles#edit', as: 'editprofile'
+  resource :profile, :only => [:show, :edit, :update]
+  resources :users, :only => [:show]
+
   # Requests for schedules are directed to the schedules controller and can get html or json.
   get '/schedules(/:date)(.:format)' => 'schedules#show', :as => :schedules
 
   resources :locations, :only => [:index, :show]
   resources :maps, :only => [:index, :show]
-  resources :direct_messages, :only => [:index, :new, :create]
+  resources :direct_messages, :only => [:index, :sent, :new, :create] do
+    collection do
+      get :sent
+    end
+  end
 
   resources :courses do
     resources :assignments

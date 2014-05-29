@@ -1,4 +1,10 @@
+<% content_for :navigation_title do %>
+    New Message
+<% end %>
+
 <%= form_for @message do |f| %>
+    <%= f.hidden_field :to_user_id %>
+
     <div>
       <%= image_tag @to_user.avatar.url(:thumb) %><%= @to_user.full_name %>
     </div>
