@@ -6,9 +6,12 @@
   <% @messages.each do |message| %>
       <li>
         <%= link_to new_direct_message_path(:to_user_id => message.from_user_id) do %>
-            <%= image_tag message.from_user.avatar.url(:thumb) %><%= message.from_user.full_name %>
-            <%= message.text %>
+            <%= image_tag message.from_user.avatar.url(:thumb), :style => 'width: 32px; height: 32px; margin-right: 6px;' %>
+            <%= message.from_user.full_name %>
         <% end %>
+        <div style="margin-top: 15px;">
+          <%= message.text %>
+        </div>
       </li>
   <% end %>
 </ul>

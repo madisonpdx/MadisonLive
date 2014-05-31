@@ -5,8 +5,8 @@
 <%= form_for @message do |f| %>
     <%= f.hidden_field :to_user_id %>
 
-    <div>
-      <%= image_tag @to_user.avatar.url(:thumb) %><%= @to_user.full_name %>
+    <div style="margin-bottom: 15px;">
+      <%= image_tag @to_user.avatar.url(:thumb), :style => 'width: 32px; height: 32px; margin-right: 6px;' %><%= @to_user.full_name %>
     </div>
 
     <div class="form-group">

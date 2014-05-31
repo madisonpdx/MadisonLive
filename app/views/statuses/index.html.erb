@@ -18,6 +18,9 @@
     <li>
         <h3><%= image_tag status.user.avatar.url(:thumb) %><%= status.user.full_name %></h3>
         <%= status.text %>
+        <div style="text-align: right;">
+            <%= link_to 'Direct Message', new_direct_message_path(:to_user_id => status.user.id) %>
+        </div>
     </li>
 <% end %>
 </ul>
