@@ -14,10 +14,16 @@
 <% end %>
 
 <ul class="statuses">
-<% @statuses.each do |status| %>
-    <li>
-        <h3><%= image_tag status.user.avatar.url(:thumb) %><%= status.user.full_name %></h3>
-        <%= status.text %>
-    </li>
-<% end %>
+  <% @statuses.each do |status| %>
+      <li>
+        <%= image_tag status.user.avatar.url(:thumb), :style => 'width: 32px; height: 32px; margin-right: 6px;' %>
+        <%= status.user.full_name %></h3>
+        <div style="margin-top: 15px;">
+          <%= status.text %>
+        </div>
+        <div style="text-align: right; margin-top: 15px;">
+          <%= link_to 'Direct Message', new_direct_message_path(:to_user_id => status.user.id) %>
+        </div>
+      </li>
+  <% end %>
 </ul>
