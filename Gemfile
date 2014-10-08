@@ -20,7 +20,7 @@ end
 
 gem 'devise'
 gem 'paperclip', '~>  4.1.1'
-gem 'rmagick'
+#gem 'rmagick'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
