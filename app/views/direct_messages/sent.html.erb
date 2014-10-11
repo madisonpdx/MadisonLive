@@ -3,6 +3,7 @@
 <% end %>
 
 <ul class="direct-messages">
+  <h3>Sent Messages</h3>
   <% @messages.each do |message| %>
       <li>
         <%= link_to new_direct_message_path(:to_user_id => message.from_user_id) do %>
